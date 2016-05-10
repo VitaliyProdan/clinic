@@ -1,0 +1,48 @@
+/***
+Theme Name:   My Theme
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Twenty Fifteen Child Theme
+ Author:       Vitalii Prodan
+ Author URI:   http://example.com
+ Template:     mustang-lite
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-fifteen-child
+***/
+
+header.header-wrapper:not(.is-sticky) .logo img{
+ margin-bottom: 10px;
+ margin-top: -10px;
+}
+.widget_text .textwidget img{
+ margin: auto;
+ display: block;
+}
+.full-width-container.eight.pane{
+ width: 100%;
+}
+.responsive-tabs .responsive-tabs__list__item{
+ font-size: 14px!important;
+}
+#mobile-nav{
+ float: right!important;
+}
+.many-tabs .responsive-tabs .responsive-tabs__list__item{
+ white-space: pre-line!important;
+ width: 100px;
+}
+
+@media(max-width: 903px) {
+ .footer-widgets .widget{
+  width: 48% !important;
+ }
+}
+
+@media(max-width: 550px) {
+ .footer-widgets .widget{
+  width: 100% !important;
+ }
+}
+
