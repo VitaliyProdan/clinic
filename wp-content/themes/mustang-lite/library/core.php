@@ -334,14 +334,10 @@
 				//Logo HTML
 					$output .= '<' . $logo_tag . ' class="' . apply_filters( 'wmhook_wm_logo_class', 'logo type-' . $args['logo_type'], $args['logo_type'] ) . '">';
 						$output .= '<a href="' . $args['url'] . '" title="' . esc_attr( $args['description'] ) . '">';
+					$output .= $args['logo_image'] . '<span class="screen-reader-text">' . get_bloginfo( 'name' ) . ' </span>';
 
-							if ( 'text' === $args['logo_type'] ) {
-								$output .= '<span class="text-logo">' . get_bloginfo( 'name' ) . '</span>';
-							} else {
-								$output .= $args['logo_image'] . '<span class="screen-reader-text">' . get_bloginfo( 'name' ) . ' </span>';
-							}
 
-							if ( get_bloginfo( 'description' ) ) {
+			if ( get_bloginfo( 'description' ) ) {
 								$output .= '<span class="description">' . get_bloginfo( 'description' ) . '</span>';
 							}
 
