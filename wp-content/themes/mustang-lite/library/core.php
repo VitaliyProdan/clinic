@@ -283,8 +283,8 @@
 
 				$args = apply_filters( 'wmhook_wm_logo_args', array(
 						'description' => ( get_bloginfo( 'description' ) ) ? ( get_bloginfo( 'name' ) . ' | ' . get_bloginfo( 'description' ) ) : ( get_bloginfo( 'name' ) ),
-						'logo_image'  => array( wm_option( 'skin-logo' ), wm_option( 'skin-logo-hidpi' ) ),
-						'logo_type'   => 'img',
+						'logo_image'  => array("//clinic.dev/wp-content/themes/mustang-lite/assets/img/branding/logo-mustang.png", "//clinic.dev/wp-content/themes/mustang-lite/assets/img/branding/logo-mustang@2x.png" ),
+						'logo_type'   => 'text',
 						'logo_size'   => explode( 'x', WM_DEFAULT_LOGO_SIZE ),
 						'url'         => home_url(),
 					) );
@@ -338,9 +338,7 @@
 							if ( 'text' === $args['logo_type'] ) {
 								$output .= '<span class="text-logo">' . get_bloginfo( 'name' ) . '</span>';
 							} else {
-								$output .= '<img width="' . $args['logo_size'][0] . '" height="' . $args['logo_size'][1] . '" src="' . '/wp-content/themes/mustang-lite/assets/img/branding/logo-mustang.png' . '" alt="' . esc_attr( sprintf( __( '%s logo', 'wm_domain' ), trim( get_bloginfo( 'name' ) ) ) ) . '" title="' . esc_attr( $args['description'] ) .
-                                    '" data-hidpi="' . '/wp-content/themes/mustang-lite/assets/img/branding/logo-mustang@2x.png' . '" />'
-                                    . '<span class="screen-reader-text">' . get_bloginfo( 'name' ) . ' </span>';
+								$output .= $args['logo_image'] . '<span class="screen-reader-text">' . get_bloginfo( 'name' ) . ' </span>';
 							}
 
 							if ( get_bloginfo( 'description' ) ) {
