@@ -312,7 +312,7 @@
 
 						} else {
 
-							$args['logo_image'] = '<img width="' . $args['logo_size'][0] . '" height="' . $args['logo_size'][1] . '" src="' . '/wp-content/themes/mustang-lite/assets/img/branding/logo-mustang.png' . '" alt="' . esc_attr( sprintf( __( '%s logo', 'wm_domain' ), trim( get_bloginfo( 'name' ) ) ) ) . '" title="' . esc_attr( $args['description'] ) .
+							$args['logo_image'] = '<img style="    margin-bottom: 10px; margin-top: -10px;" width="' . $args['logo_size'][0] . '" height="' . $args['logo_size'][1] . '" src="' . '/wp-content/themes/mustang-lite/assets/img/branding/logo-mustang.png' . '" alt="' . esc_attr( sprintf( __( '%s logo', 'wm_domain' ), trim( get_bloginfo( 'name' ) ) ) ) . '" title="' . esc_attr( $args['description'] ) .
 								'" data-hidpi="' . '/wp-content/themes/mustang-lite/assets/img/branding/logo-mustang@2x.png' . '" />';
 
 						}
