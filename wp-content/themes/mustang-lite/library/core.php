@@ -283,7 +283,7 @@
 
 				$args = apply_filters( 'wmhook_wm_logo_args', array(
 						'description' => ( get_bloginfo( 'description' ) ) ? ( get_bloginfo( 'name' ) . ' | ' . get_bloginfo( 'description' ) ) : ( get_bloginfo( 'name' ) ),
-						'logo_image'  => array("//clinic.dev/wp-content/themes/mustang-lite/assets/img/branding/logo-mustang.png", "//clinic.dev/wp-content/themes/mustang-lite/assets/img/branding/logo-mustang@2x.png" ),
+						'logo_image'  => array( wm_option( 'skin-logo' ), wm_option( 'skin-logo-hidpi' ) ),
 						'logo_type'   => 'text',
 						'logo_size'   => explode( 'x', WM_DEFAULT_LOGO_SIZE ),
 						'url'         => home_url(),
